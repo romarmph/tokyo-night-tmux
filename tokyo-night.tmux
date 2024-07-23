@@ -58,9 +58,9 @@ tmux set -g status-left "#[fg=${THEME[foreground]},bg=${THEME[background]},nobol
 
 #+--- Windows ---+
 # Focus
-tmux set -g window-status-current-format "$RESET#[fg=${THEME[green]},bg=${THEME[bblack]}] #[fg=${THEME[foreground]},nobold,nodim]$window_number #W#[nobold]#{?window_zoomed_flag, $zoom_number, $custom_pane} #{?window_last_flag,,} "
+tmux set -g window-status-current-format "$RESET#[fg=${THEME[green]},bg=${THEME[bblack]}] #[fg=${THEME[cyan]},nobold,nodim]$window_number #W#[nobold]#{?window_zoomed_flag, ,} #{?window_last_flag,,} "
 # Unfocused
-tmux set -g window-status-format "$RESET#[fg=${THEME[foreground]}] ${RESET} $window_number #W#[nobold,dim]#{?window_zoomed_flag, $zoom_number, $custom_pane} #[fg=${THEME[yellow]}]#{?window_last_flag,󰁯 , } "
+tmux set -g window-status-format "$RESET#[fg=${THEME[foreground]}] ${RESET} $window_number #W#[nobold,dim]#{?window_zoomed_flag, , } #[fg=${THEME[yellow]}]#{?window_last_flag, , } "
 
 #+--- Bars RIGHT ---+
 tmux set -g status-right "$battery_status$current_path$cmus_status$netspeed$git_status$wb_git_status$date_and_time"
